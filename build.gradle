@@ -1,0 +1,67 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.9.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {//빌드 스크립트에서 사용할 의존라이브러리를 선언
+        //스프링 부트 애플리케이션을 빌드하려면 스프링 부트 그레이들 플러그인이 필요
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'    // 자바 프로젝트 유형을 적용
+apply plugin: 'idea'    // intellij idea프로젝트 파일을 만드는데 필요
+apply plugin: 'eclipse' // 이클립스 프로젝트 파일을 만드는 데 필요
+apply plugin: 'org.springframework.boot'    //스프링 부트 애플리케이션을 지원을 적용
+
+group = 'com.ilsan'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+// 프로젝트에서 의존 라이브러리를 찾는데 사용할 리포지토리를 선언
+repositories {
+    mavenCentral()
+}
+
+// 프로젝트에서 컴파일 테스트 중에 사용할 의존라이브러리를선언
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+
+    // spring boot 에서 jsp를 사용하기 위한
+    compile('org.apache.tomcat.embed:tomcat-embed-jasper')
+    compile('javax.servlet:jstl:1.2')
+
+    //bootstrap (webjars사용 http://www.webjars.org/bower)
+    compile 'org.webjars:bootstrap:3.3.6'
+
+    //jquery (webjars사용 http://www.webjars.org/bower)
+    compile 'org.webjars.bower:jquery:3.1.1'
+
+    // DB
+    compile 'org.springframework.boot:spring-boot-starter-jdbc'
+    compile 'com.oracle:ojdbc6:11.2.0.3'
+    compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.1'
+
+    compileOnly('org.projectlombok:lombok')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+
+
+
+}
+
+//소스를 컴파일하고 빌드 완료된 프로그램을 실행할 때 사용할 자바버전을 선언
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+//손쉬운 배포를 위해 생성할 그레이들 래퍼버전을 선언
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.4.1'
+}
+
+/*
+    jar로 패키징할 때 사용할 이름과 버전을 선언
+    baseName = 'myggumi'
+    version = '1.0.0-SNAPSHOT'
+ */
