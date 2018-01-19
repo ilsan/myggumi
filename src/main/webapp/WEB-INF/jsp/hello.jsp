@@ -8,5 +8,7 @@
 </head>
 <body>
 <h1>Hello, world</h1>
+<a href="../../assets/img/work/thumbs/image-01.jpg"></a>
+<a href="../../assets/img/work/thumbs/image-01.jpg"></a>
 </body>
 </html>

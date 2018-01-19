@@ -6,10 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class SampleController {
 
-        @RequestMapping("/")
-        public String helloWorld() {
-            return "hello";
-        }
+    @RequestMapping("/")
+    public String helloIndex() {
+        return "index";
+    }
 
-
+    @RequestMapping("/hello")
+    public String hello() {
+        return "hello";
+    }
 }
