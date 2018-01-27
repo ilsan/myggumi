@@ -4,11 +4,10 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Test: hello</title>
+    <title>Product Detail</title>
 </head>
 <body>
-<h1>Hello, world</h1>
-<a href="../../assets/img/work/thumbs/image-01.jpg"></a>
-<a href="../../assets/img/work/thumbs/image-01.jpg"></a>
+<h1>detail</h1>
+
 </body>
 </html>

@@ -11,4 +11,8 @@ spring:
       static-path-pattern: /resources/**
 server:
   context-path: /
-  port: 9091
+  port: 9092
+
+
+
+
