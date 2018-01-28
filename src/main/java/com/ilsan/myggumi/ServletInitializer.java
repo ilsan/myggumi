@@ -7,6 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        // 스프링 환경 구성 클래스 지정
         return application.sources(MyggumiApplication.class);
     }
 
