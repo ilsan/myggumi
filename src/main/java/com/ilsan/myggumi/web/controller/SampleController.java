@@ -11,8 +11,8 @@ public class SampleController {
         return "index";
     }
 
-    @RequestMapping("/hello")
+    @RequestMapping("/join")
     public String hello() {
-        return "hello";
+        return "user/join";
     }
 }
