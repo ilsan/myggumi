@@ -355,6 +355,7 @@
 </head>
 
 <body>
+<form method="post" action="userJoinOk" onsubmit="return join_check()">
 	<div id="main">
 	  <div id="top">
 	  	<hr>
@@ -375,7 +376,7 @@
 			기본정보
 		</div><!-- body_left -->
 		<div id="body_table">
-			<form method="post" action="userJoinOk" onsubmit="return join_check()">
+			
 			<table border="0">
 				<tr>
 					<th>

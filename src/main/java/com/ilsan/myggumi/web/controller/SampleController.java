@@ -9,17 +9,13 @@ public class SampleController {
 
     @RequestMapping("/")
     public String helloIndex() {
-        return "index";
+        return "index.t";
     }
 
     @RequestMapping(value="/join", method=RequestMethod.GET)
     public String join() {
-        return "user/join";
+        return "user/join.t";
     }
     
-    @RequestMapping(value="/main",method=RequestMethod.GET)
-    public String main() {
-    	
-    	return "layout.index";
-    }
+
 }

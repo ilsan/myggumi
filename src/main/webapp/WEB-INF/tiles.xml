@@ -15,8 +15,11 @@
 	
 <!-- 	pages
 	여기서 name의 index, login은 controller에서 RequestMapping할 때 return 해주는 page -->
-	<definition name="layout.index" extends="layout.default">
- 		<put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
-<!-- 		<put-attribute name="body" value="/WEB-INF/jsp/user/join.jsp" /> -->
+	<definition name="*.t" extends="layout.default">
+ 		<put-attribute name="body" value="/WEB-INF/jsp/{1}.jsp" />
+	</definition>
+	
+		<definition name="*/*.t" extends="layout.default">
+ 		<put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}.jsp" />
 	</definition>
 </tiles-definitions>
