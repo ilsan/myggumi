@@ -11,3 +11,13 @@ spring:
       static-path-pattern: /resources/**
 
 
+mybatis:
+  type-aliases-package: com.ilsan.myggumi.web.domain
+  mapper-locations: classpath:mappers/*.xml
+  configuration:
+    default-statement-timeout: 120
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    com.ilsan.myggumi.web: DEBUG

@@ -5,11 +5,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
+@RequestMapping(value = "/user")
 public class SampleController {
 
-    @RequestMapping("/")
+    @RequestMapping("/login")
     public String helloIndex() {
-        return "index.t";
+        return "index";
     }
 
     @RequestMapping(value="/join", method=RequestMethod.GET)
