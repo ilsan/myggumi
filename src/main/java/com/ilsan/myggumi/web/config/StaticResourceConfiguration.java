@@ -1,4 +1,4 @@
-package com.ilsan.myggumi;
+package com.ilsan.myggumi.web.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
