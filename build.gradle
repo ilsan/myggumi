@@ -43,6 +43,9 @@ repositories {
 
 // 프로젝트에서 컴파일 테스트 중에 사용할 의존라이브러리를선언
 dependencies {
+
+	//providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+
     compile('org.springframework.boot:spring-boot-starter-web')
 
     // spring boot 에서 jsp를 사용하기 위한
@@ -62,6 +65,9 @@ dependencies {
 
     compile 'org.projectlombok:lombok'
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    
+    //tiles
+	compile 'org.apache.tiles:tiles-jsp:3.0.4'
 
 
 

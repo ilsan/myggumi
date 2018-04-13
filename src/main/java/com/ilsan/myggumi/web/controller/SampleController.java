@@ -16,7 +16,7 @@ public class SampleController {
 	
     @RequestMapping("/")
     public String helloIndex() {
-        return "index";
+        return "index.t";
     }
 
     @RequestMapping("/join")
