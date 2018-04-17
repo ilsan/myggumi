@@ -13,7 +13,8 @@ buildscript {
 
 apply plugin: 'java'    // 자바 프로젝트 유형을 적용
 apply plugin: 'idea'    // intellij idea프로젝트 파일을 만드는데 필요
-apply plugin: 'eclipse' // 이클립스 프로젝트 파일을 만드는 데 필요
+//apply plugin: 'eclipse' // 이클립스 프로젝트 파일을 만드는 데 필요 
+apply plugin: 'eclipse-wtp'	//외부톰캣 추가 
 apply plugin: 'org.springframework.boot'    //스프링 부트 애플리케이션을 지원을 적용
 apply plugin: 'war'
 
@@ -22,8 +23,10 @@ group = 'com.ilsan'
 //version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
+
 war {
     baseName = 'ROOT'
+    version = '0.0.1-SNAPSHOT'
 }
 
 //jar로 패키징할 때 사용할 이름과 버전을 선언
@@ -44,12 +47,12 @@ repositories {
 // 프로젝트에서 컴파일 테스트 중에 사용할 의존라이브러리를선언
 dependencies {
 
-	//providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 
     compile('org.springframework.boot:spring-boot-starter-web')
 
     // spring boot 에서 jsp를 사용하기 위한
-    compile('org.apache.tomcat.embed:tomcat-embed-jasper')
+    //compile('org.apache.tomcat.embed:tomcat-embed-jasper')
     compile('javax.servlet:jstl:1.2')
 
     //bootstrap (webjars사용 http://www.webjars.org/bower)
@@ -68,6 +71,8 @@ dependencies {
     
     //tiles
 	compile 'org.apache.tiles:tiles-jsp:3.0.4'
+	
+	
 
 
 
