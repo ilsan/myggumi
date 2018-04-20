@@ -3,7 +3,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 <script type="text/javascript">
 	var iphone;
 	var ipad;
@@ -459,7 +458,7 @@
 			
 			<!-- 메인로그 -->
 			<div id="top_Body_Obj4">
-				<img alt="" src="images/Myggumi.png" id="obj4_img" onclick="location.href='/'">
+				<img alt="" src="images/Myggumi.png" id="obj4_img" onclick="location.href='<%=request.getContextPath()%>/'">
 			</div>
 			
 			<!-- 로그인관련 -->
@@ -558,7 +557,7 @@
 			</div>
 			<div id="login_foot_2">
 				<div id="login_foot_2_div_1">아직 마이꾸미 회원이 아니세요?</div>
-				<div id="login_foot_2_div_2"><a href="#">회원가입하기</a></div>
+				<div id="login_foot_2_div_2"><a href="join">회원가입하기</a></div>
 			</div>
 		</div>
 	</div>

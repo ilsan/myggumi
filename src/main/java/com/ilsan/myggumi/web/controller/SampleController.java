@@ -30,5 +30,5 @@ public class SampleController {
     	
     	mv.setViewName("redirect:join");
     	return mv;
-    }
+    } 
 }
