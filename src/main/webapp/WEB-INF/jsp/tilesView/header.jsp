@@ -29,6 +29,9 @@
 				display.style.display = 'none';
 			}
 		}
+		
+		//mainpage window.onload()
+		loofFont();
 	}
 		
 	function Obj1_button_onclick(){		
@@ -161,14 +164,14 @@
 	#top_Main{
 		width: 100%;
 		overflow: auto;
-		min-width: 1000px;
+		min-width: 1600px;
 		height: 73px;
-		padding: 0 10%;
 	}
 	
 	#top_Body_Obj1{
 		width: 10%;
 		margin-top: 2%;
+		margin-left: 10%;
 		float: left;
 		height: 21px;
 	}
@@ -191,7 +194,7 @@
 		width: 10%;
 		float: left;
 		margin-top: 2%;
-		
+		margin-right: 2%;
 	}
 	
 		#Obj2_button{
@@ -205,6 +208,7 @@
 		width: 10%;
 		float: left;
 		margin-top: 2%;
+		margin-right: 2%; 
 		
 	}
 	
@@ -266,7 +270,7 @@
 		padding: 0 20%;
 		background-color: #585657;
 		overflow: auto;
-		min-width: 1000px;
+		min-width: 1600px;
 	}
 	
 	#main_menu{
@@ -333,6 +337,7 @@
 		display: none;
 		margin: 0;
 		position: absolute;
+		background-color: white;
 	}
 	
 	#login_top{
@@ -429,7 +434,7 @@
 		height: 40px;
 		background-color: #BDBDBD;
 		text-align: center;
-		padding-bottom: 20px;
+		padding-bottom: 25px;
 		
 		}
 		

@@ -5,16 +5,28 @@
 <head>
 	<style type="text/css">
 		#foot{
-			width: 80%;
-			padding-left: 10%;
-			padding-right: 10%;
-			min-width: 900px;
+			width: 100%;
+			min-width: 1600px;
+		}
+		
+		#foot_main_left{
+			 float: left;
+			 padding-top: 3%;
+			 margin-left: 10%;
+			 width: 16%;
+		}
+		
+		#foot_main_right{
+			 float: left;
+			 padding-top: 3%;
+			 margin-right: 10%;
+			 width: 16%; 
 		}
 	
 		.foot_main{
 			 float: left;
 			 padding-top: 3%;
-			 width: 20%;
+			 width: 16%;
 		}
 		
 		.foot_main_1{
@@ -33,7 +45,7 @@
 </head>
 
 <div id="foot" >
-	<div class="foot_main">
+	<div id="foot_main_left">
 		<div class="foot_main_1">고객지원</div>
 		<div class="foot_main_font"><a href="#">고객지원센터 바로가기</a></div>
 		<div class="foot_main_font"><a href="#">공식 페이스북</a></div>
@@ -65,7 +77,7 @@
 		<div class="foot_main_font"><a href="#">개인정보취급방침</a></div>
 		<div class="foot_main_font"><a href="#">이용안내</a></div>
 	</div>
-	<div class="foot_main">
+	<div id="foot_main_right">
 		<div class="foot_main_1">무통장입금</div>
 		<div class="foot_main_font">농협은행 000-000000-0000</div>
 		<div class="foot_main_font">국민은행 111111-11-111111</div>
