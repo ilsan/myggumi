@@ -43,7 +43,7 @@ public class SampleController {
     	
     	for(int i=0;i<21;i++) {
     		newItemList.add(vo);
-    	}
+    	} 
     	
     	for(int i=0;i<21;i++) {
     		hotItemList.add(vo);
@@ -56,7 +56,7 @@ public class SampleController {
     	mv.addObject("newItemList", newItemList);
     	mv.addObject("hotItemList", hotItemList);*/
     	mv.addObject("recommendItemList", recommendItemList);
-    	mv.addObject("newItemList", newItemList);
+    	mv.addObject("newItemList", newItemList); 
     	mv.addObject("hotItemList", hotItemList);
     	mv.setViewName("mainpage.t");
     	 
@@ -66,7 +66,7 @@ public class SampleController {
 
     @RequestMapping("/join")
     public String hello() {
-        return "user/join";
+        return "user/join.t";
     }
     @RequestMapping("/userJoinOk")
     public ModelAndView userJoinOk(joinVO vo) {

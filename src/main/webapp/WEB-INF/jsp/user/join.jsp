@@ -8,11 +8,9 @@
 <title>Insert title here</title>
 <style type="text/css">
 	#main{
-		padding-left: 10%;
-		padding-right: 10%;
 		height: auto;
 		overflow: auto;
-		min-width: 900px;
+		min-width: 1600px;
 	}
 	
 	#top{
@@ -20,7 +18,8 @@
 	}
 	
 	#top table{
-		width: 100%;
+		width: 90%;
+		margin-left: 10%;
 		table-layout: fixed;
 	}
 	#top_radio{
@@ -35,7 +34,8 @@
 	
 	#body_left{
 		padding-top: 3%;
-		width: 25%;
+		width: 15%;
+		margin-left: 10%;
 		float: left;
 	}
 	
@@ -98,7 +98,8 @@
 	
 	.foot_body_left{
 		padding-top: 3%;
-		width: 25%;
+		width: 15%;
+		margin-left: 10%;
 		float: left;
 	}
 	

@@ -238,6 +238,7 @@
 			</div>
 			<div class="item_state">
 			<!-- 30x50 px -->
+				<%-- <img alt="" src="${tag1 ne '' ? tag1 : ''} "> --%>
 				<img alt="" src="images/mainpage/sale.png">
 				<img alt="" src="images/mainpage/new.png">
 				<img alt="" src="images/mainpage/hot.png">
@@ -261,7 +262,7 @@
 			<div class="item_color">
 			<!-- 10x10 px -->
 			<c:if test="${!empty i.itemColor}">
-				<img alt="" src="images/mainpage/color_red.png">
+				<img alt="" src="images/mainpage/color_red.png" > <!-- 엑박안뜨게  -->
 			 </c:if>
 			</div>
 		</a>
