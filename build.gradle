@@ -50,6 +50,7 @@ dependencies {
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 
     compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-security')
 
     // spring boot 에서 jsp를 사용하기 위한
     //compile('org.apache.tomcat.embed:tomcat-embed-jasper')

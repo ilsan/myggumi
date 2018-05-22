@@ -189,7 +189,7 @@
 				// 아이디 중복 여부 확인	db만들고 해봐야함
 				$.ajax({  // Ajax 시작하겠다는 의미
 					type: "post",  // 데이터 전송 방식
-					url: "",  // 피일주소와 경로
+					url: "idcheck",  // 피일주소와 경로
 					// userId라는 변수에 userId 값을 저장해서 넘김.
 					data: {"userId" : userId},
 					datatype: "jsp",  // 통신할 문서의 데이터 타입

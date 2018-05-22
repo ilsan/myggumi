@@ -14,5 +14,6 @@ public interface UserRepository {
 
     MemberSession findByUserEmail(@Param("username") String username);
     public int joinUser(Map<String, Object> map);
+    public int idCheck(String id);
 
 }

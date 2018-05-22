@@ -17,6 +17,9 @@
     	insert into member_user values(member_user_seq.nextval,#{id},#{password},#{name},#{zipCode},#{address1},#{address2},#{mobileNumber},#{email},#{role},sysdate)
     </insert>
     
+    <select id="idCheck" parameterType="String" resultType="Integer">
+    	select count(*) from member_user where "id"=#{id}
+    </select>
     
 
 </mapper>

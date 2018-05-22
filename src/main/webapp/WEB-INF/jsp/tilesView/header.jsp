@@ -31,7 +31,10 @@
 		}
 		
 		//mainpage window.onload()
-		loofFont();
+		var test = document.getElementById("top_animation");
+		if(test != null || 'none'){
+			loofFont();
+		}
 	}
 		
 	function Obj1_button_onclick(){		

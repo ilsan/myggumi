@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript">
-		
+	
 	function loofFont(){
 		$("#top_animation").animate({fontSize:"25px"},3000)
 		.animate({fontSize:"35px"},3000, loofFont);

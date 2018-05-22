@@ -13,13 +13,14 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service
-public class MyggumiUserJoinService {
+public class MyggumiUserService {
 	
 	@Autowired
 	private UserRepository userRepository;
 	
 	public int JoinUser(joinVO vo){
 		Map<String, Object> map = new HashMap<String,Object>();
+		
 		map.put("id",vo.getUserId());
 		map.put("password", vo.getUserPwd());
 		map.put("name", vo.getUserName());
@@ -32,6 +33,11 @@ public class MyggumiUserJoinService {
 		map.put("email", email);
 		map.put("role", "member");
 		return userRepository.joinUser(map); 
+	}
+	
+	public int idCheck(String id) {
+		
+		return userRepository.idCheck(id);
 	}
 	
 	

@@ -1,22 +1,31 @@
 package com.ilsan.myggumi.web.controller;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ilsan.myggumi.web.domain.itemTestVO;
 import com.ilsan.myggumi.web.domain.joinVO;
-import com.ilsan.myggumi.web.service.MyggumiUserJoinService;
+import com.ilsan.myggumi.web.service.MyggumiUserService;
 
 @Controller
 public class SampleController {
 
 	@Autowired
-	private MyggumiUserJoinService joinservice;
+	private MyggumiUserService userservice;
+	
+	@Autowired
+	private PasswordEncoder encoder;
 	
     @RequestMapping("/test")
     public String helloIndex() {
@@ -68,12 +77,26 @@ public class SampleController {
     public String hello() {
         return "user/join.t";
     }
+    
     @RequestMapping("/userJoinOk")
     public ModelAndView userJoinOk(joinVO vo) {
     	ModelAndView mv = new ModelAndView();
-    	joinservice.JoinUser(vo);
+    	String pwd =  encoder.encode(vo.getUserPwd());
+    	vo.setUserPwd("pwd");
+    	userservice.JoinUser(vo);
     	
     	mv.setViewName("redirect:join");
     	return mv;
     } 
+    
+    @ResponseBody
+    @RequestMapping("idcheck")
+    public void idcheck(String userId, HttpServletResponse respornse) throws IOException {
+    	System.out.println("일단 ㅌ마~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    	int result = userservice.idCheck(userId);
+    	PrintWriter out = respornse.getWriter();
+    	System.out.println("결과  : ~~~~~~~~~~~~~~~~~ "  + result);
+    	out.println(result);
+    	
+    }
 }
